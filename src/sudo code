@@ -1,0 +1,29 @@
+School management system sudo code
+
+
+1. Create School Management System “students, teachers and funds
+
+2. Money management system for school
+		- keeps track of students total fees
+		-fees already paid
+		-teachers  salary
+
+//school
+Teachers
+Students
+Total money earned
+Total money spent - teachers salary
+
+
+//Teacher
+Id
+Name
+Salary
+
+//student
+Id
+Name
+grade
+Fees paid
+Fees total
+
