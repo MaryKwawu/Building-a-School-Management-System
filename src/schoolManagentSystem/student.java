@@ -2,7 +2,9 @@ package schoolManagentSystem;
 //This class keeps track of students Id, Name, grade, Fees paid, Fees total
 
 public class student {
-    //objects
+    /**
+     * objects
+     */
     private  int id;
     private String name;
     private int grade;
@@ -12,11 +14,12 @@ public class student {
 
     /**
      * construstor: create a new student by initializing
-     * fess for every student is GH6,000
-     * fees paid initially is GH0
-     *
+     *  fess for every student is GH6,000
+     *  fees paid initially is GH0
+     * @param id
+     * @param name
+     * @param grade
      */
-
     public student(int id, String name, int grade){
         this.id = id;
         this.name = name;
@@ -25,11 +28,12 @@ public class student {
         this.feestotal = 0;
 
     }
-/**
- *
- * update student value
- * getter
- */
+
+    /**
+     * update student value
+     * set grade
+     * @param grade
+     */
 
 public void setGrade(int grade){
     this.grade = grade;
@@ -37,14 +41,14 @@ public void setGrade(int grade){
 }
 
 
-/**
- * Keep adding the fees to the fees paid
- *  * Fees that the student pays
- *  * feespaid = 2000 + 3000 + 4000
- *  * And the fees to the fees paid
- */
-
-public void updateFeesPaid(int fees){
+    /**
+     * * Keep adding the fees to the fees paid
+     * Fees that the student pays
+     *  feespaid = 2000 + 3000 + 4000
+     *  And the fees to the fees paid
+     * @param fees
+     */
+    public void updateFeesPaid(int fees){
     feespaid+=fees;
 }
 }
