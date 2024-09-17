@@ -51,4 +51,46 @@ public void setGrade(int grade){
     public void updateFeesPaid(int fees){
     feespaid+=fees;
 }
+
+
+    /**
+     *
+     * @return the id of the student.
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     *
+     * @return the name of the student
+     */
+    public String getName() {
+        return name;
+    }
+
+
+    /**
+     *
+     * @return the grade of the student
+     */
+    public int getGrade() {
+        return grade;
+    }
+
+    /**
+     *
+     * @return the fees paid by the student
+     */
+    public int getFeespaid() {
+        return feespaid;
+    }
+
+    /**
+     *
+     * @return total fees of the student
+     */
+    public int getFeestotal() {
+        return feestotal;
+    }
 }

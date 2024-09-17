@@ -8,6 +8,7 @@ package schoolManagentSystem;
 
 
 public class Teacher {
+    //object
     private int id;
     private String name;
     private int salary;
@@ -36,7 +37,7 @@ public class Teacher {
 
     /**
      *
-     * @return name of teacher
+     * @return name of the teacher
      */
 
     public String getName(){
@@ -46,7 +47,7 @@ public class Teacher {
 
     /**
      *
-     * @return salary of teacher
+     * @return salary of the teacher
      */
     public int getSalary(){
         return salary;
@@ -60,3 +61,6 @@ public class Teacher {
         this.salary = salary;
     }
 }
+
+
+
