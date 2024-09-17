@@ -1,7 +1,7 @@
 package schoolManagentSystem;
 //This class keeps track of students Id, Name, grade, Fees paid, Fees total
 
-public class student {
+public class Student {
     /**
      * objects
      */
@@ -20,7 +20,7 @@ public class student {
      * @param name
      * @param grade
      */
-    public student(int id, String name, int grade){
+    public Student(int id, String name, int grade){
         this.id = id;
         this.name = name;
         this.grade = grade;
