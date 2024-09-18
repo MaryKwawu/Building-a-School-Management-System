@@ -12,8 +12,8 @@ import java.util.List;
  */
 
 public class School {
-    private List<Teacher> teacher;
-    private List<Student> student;
+    private List<Teacher> teachers;
+    private List<Student> students;
     private int totalmoneyearned;
     private int totalmoneyspent;
 
@@ -23,42 +23,79 @@ public class School {
      * @param student list of students in the school
      */
     public School(List<Teacher> teacher, List<Student> student) {
-        this.teacher = teacher;
-        this.student = student;
+        this.teachers = teacher;
+        this.students = student;
         totalmoneyearned = 0;
         totalmoneyspent = 0;
 
     }
 
+    /**
+     * return the list of teachers in the school
+     * @return
+     */
+
     public List<Teacher> getTeacher() {
-        return teacher;
+        return teachers;
     }
 
-    public void setTeacher(List<Teacher> teacher) {
-        this.teacher = teacher;
+    /**
+     *Adds a teacher to a school
+     * @param teacher the teacher to be added
+     */
+
+    public void addTeacher(Teacher teacher) {
+        teachers.add(teacher);
     }
 
+    /**
+     *
+     * @return the students in a schoo
+     */
     public List<Student> getStudent() {
-        return student;
+        return students;
     }
 
-    public void setStudent(List<Student> student) {
-        this.student = student;
+
+    /**
+     *Adds students to a school
+     * @param student the student to be added
+     */
+    public void addStudent(Student student) {
+        students.add(student);
     }
 
+
+    /**
+     *
+     * @return the list of total money earned
+     */
     public int getTotalmoneyearned() {
         return totalmoneyearned;
     }
 
-    public void setTotalmoneyearned(int totalmoneyearned) {
-        this.totalmoneyearned = totalmoneyearned;
+    /**
+     * Adds the total money earn by the school
+     * @param moneyearned that that is suposed to be added
+     */
+    public void updateTotalmoneyearned(int moneyearned) {
+        totalmoneyearned += moneyearned;
     }
 
+    /**
+     *
+     * @return the list of money earned
+     */
     public int getTotalmoneyspent() {
         return totalmoneyspent;
     }
 
-    public void setTotalmoneyspent(int totalmoneyspent) {
-        this.totalmoneyspent = totalmoneyspent;
+    /**
+     * update the total money spent by the school,
+     * the salary given by school to teachers
+     * @param moneyspent the money that is spent by school
+     */
+    public void updateTotalmoneyspent(int moneyspent) {
+        totalmoneyspent-=moneyspent;
     }
 }
