@@ -76,7 +76,7 @@ public class School {
 
     /**
      * Adds the total money earn by the school
-     * @param moneyearned that that is suposed to be added
+     * @param moneyearned that is suposed to be added
      */
     public void updateTotalmoneyearned(int moneyearned) {
         totalmoneyearned += moneyearned;
@@ -98,4 +98,6 @@ public class School {
     public void updateTotalmoneyspent(int moneyspent) {
         totalmoneyspent-=moneyspent;
     }
+
+    
 }
