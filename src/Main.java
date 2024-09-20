@@ -10,9 +10,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        /**
-         * creating Teacher Object
-         */
+
+          //creating Teacher Object
+
 
         int teacherId1 = 1;
         String teacherName1= "Marie";
@@ -34,9 +34,9 @@ public class Main {
         teacherList.add(wiseborn);
         teacherList.add(joseph);
 
-/**
- * created student object
- */
+
+         //creating student obect
+
         int studentId1 = 2;
         String studentName1 = "Melisa";
         int studentGrade1 = 6;
@@ -59,12 +59,13 @@ public class Main {
 
 
 
+         //creating student object
 
+        School kasec = new School(teacherList, studentList);
 
-
-
-
-
-
+      //method call
+        Melisa.payFees(50000);
+        Lauren.payFees(67000);
+        System.out.println("Kasec has earned $ " + kasec.getTotalMoneyEarned());
     }
 }

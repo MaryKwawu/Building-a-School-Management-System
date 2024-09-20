@@ -8,8 +8,8 @@ public class Student {
     private  int id;
     private String name;
     private int grade;
-    private int feespaid;
-    private int feestotal;
+    private int payFees;
+    private int feesTotal;
 
 
     /**
@@ -24,8 +24,8 @@ public class Student {
         this.id = id;
         this.name = name;
         this.grade = grade;
-        this.feespaid = 6000;
-        this.feestotal = 0;
+        this.payFees = 0;
+        this.feesTotal = 60000;
 
     }
 
@@ -48,8 +48,11 @@ public void setGrade(int grade){
      *  And the fees to the fees paid
      * @param fees
      */
-    public void updateFeesPaid(int fees){
-    feespaid+=fees;
+    public void payFees(int fees){
+    payFees +=fees;
+
+    //method call used here based on making updateTotalMoneyEarned
+    School.updateTotalMoneyEarned(payFees);
 }
 
 
@@ -82,15 +85,28 @@ public void setGrade(int grade){
      *
      * @return the fees paid by the student
      */
-    public int getFeespaid() {
-        return feespaid;
+    public int getFeesPaid() {
+        return payFees;
     }
 
     /**
      *
      * @return total fees of the student
      */
-    public int getFeestotal() {
-        return feestotal;
+    public int getFeesTotal() {
+        return feesTotal;
     }
+
+
+    /**
+     *
+     * @return the remaining fees
+     */
+    public int getRemainingFees(){
+        return feesTotal - payFees;
+    }
+
+
+
+
 }

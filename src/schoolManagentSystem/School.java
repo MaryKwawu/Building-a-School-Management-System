@@ -14,8 +14,8 @@ import java.util.List;
 public class School {
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalmoneyearned;
-    private int totalmoneyspent;
+    private static int totalMoneyEarned;
+    private static int totalMoneySpent;
 
     /**
      *
@@ -25,8 +25,8 @@ public class School {
     public School(List<Teacher> teacher, List<Student> student) {
         this.teachers = teacher;
         this.students = student;
-        totalmoneyearned = 0;
-        totalmoneyspent = 0;
+        totalMoneyEarned = 0;
+        totalMoneySpent = 0;
 
     }
 
@@ -70,34 +70,34 @@ public class School {
      *
      * @return the list of total money earned
      */
-    public int getTotalmoneyearned() {
-        return totalmoneyearned;
+    public int getTotalMoneyEarned() {
+        return totalMoneyEarned;
     }
 
     /**
      * Adds the total money earn by the school
-     * @param moneyearned that is suposed to be added
+     * @param MoneyEarned that is suposed to be added
      */
-    public void updateTotalmoneyearned(int moneyearned) {
-        totalmoneyearned += moneyearned;
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
+        totalMoneyEarned += MoneyEarned;
     }
 
     /**
      *
      * @return the list of money earned
      */
-    public int getTotalmoneyspent() {
-        return totalmoneyspent;
+    public int getTotalMoneySpent() {
+        return totalMoneySpent;
     }
 
     /**
      * update the total money spent by the school,
      * the salary given by school to teachers
-     * @param moneyspent the money that is spent by school
+     * @param MoneySpent the money that is spent by school
      */
-    public void updateTotalmoneyspent(int moneyspent) {
-        totalmoneyspent-=moneyspent;
+    public void updateTotalMoneySpent(int MoneySpent) {
+        totalMoneySpent-= MoneySpent;
     }
 
-    
+
 }
