@@ -52,7 +52,7 @@ public void setGrade(int grade){
     payFees +=fees;
 
     //method call used here based on making updateTotalMoneyEarned
-    School.updateTotalMoneyEarned(payFees);
+    School.updateTotalMoneyEarned(fees);
 }
 
 

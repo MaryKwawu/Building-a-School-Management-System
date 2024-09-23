@@ -50,7 +50,7 @@ public class School {
 
     /**
      *
-     * @return the students in a schoo
+     * @return the students in a school
      */
     public List<Student> getStudent() {
         return students;
@@ -76,10 +76,10 @@ public class School {
 
     /**
      * Adds the total money earn by the school
-     * @param MoneyEarned that is suposed to be added
+     * @param moneyEarned that is suposed to be added
      */
-    public static void updateTotalMoneyEarned(int MoneyEarned) {
-        totalMoneyEarned += MoneyEarned;
+    public static void updateTotalMoneyEarned(int moneyEarned) {
+        totalMoneyEarned += moneyEarned;
     }
 
     /**
@@ -93,10 +93,10 @@ public class School {
     /**
      * update the total money spent by the school,
      * the salary given by school to teachers
-     * @param MoneySpent the money that is spent by school
+     * @param moneySpent the money that is spent by school
      */
-    public void updateTotalMoneySpent(int MoneySpent) {
-        totalMoneySpent-= MoneySpent;
+    public static void updateTotalMoneySpent(int moneySpent) {
+        totalMoneySpent += moneySpent;
     }
 
 

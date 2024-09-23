@@ -16,10 +16,10 @@ public class Main {
 
         int teacherId1 = 1;
         String teacherName1= "Marie";
-        int teacherSalary1 = 20000;
+        int teacherSalary1 = 2000;
         Teacher marie = new Teacher(teacherId1, teacherName1, teacherSalary1);
 
-        int teacherId2 = 3;
+        int teacherId2 = 2;
         String teacherName2 = "Wiseborn";
         int teacherSalary2 = 60000;
         Teacher wiseborn = new Teacher(teacherId2, teacherName2, teacherSalary2);
@@ -37,25 +37,25 @@ public class Main {
 
          //creating student obect
 
-        int studentId1 = 2;
+        int studentId1 = 1;
         String studentName1 = "Melisa";
         int studentGrade1 = 6;
-        Student Melisa = new Student(studentId1, studentName1 , studentGrade1);
+        Student melisa = new Student(studentId1, studentName1 , studentGrade1);
 
         int studentId2 = 2;
         String studentName2 = "Lauren";
         int studentGrade2 = 7;
-        Student Lauren = new Student(studentId2, studentName2, studentGrade2);
+        Student lauren = new Student(studentId2, studentName2, studentGrade2);
 
-        int studentId3 = 2;
+        int studentId3 = 3;
         String studentName3 = "Loren";
         int studentGrade3 = 8;
-        Student Loren = new Student(studentId3, studentName3, studentGrade3);
+        Student loren = new Student(studentId3, studentName3, studentGrade3);
 
         List <Student> studentList = new ArrayList<>();
-        studentList.add(Melisa);
-        studentList.add(Lauren);
-        studentList.add(Loren);
+        studentList.add(melisa);
+        studentList.add(lauren);
+        studentList.add(loren);
 
 
 
@@ -64,8 +64,16 @@ public class Main {
         School kasec = new School(teacherList, studentList);
 
       //method call
-        Melisa.payFees(50000);
-        Lauren.payFees(67000);
+        melisa.payFees(50000);
+        lauren.payFees(67000);
         System.out.println("Kasec has earned $ " + kasec.getTotalMoneyEarned());
+
+        System.out.println("------Making School Pay Salary------");
+        marie.receiveSalary(marie.getSalary());
+        System.out.println("Kasec has paid salary to " + marie.getName() + " and now has $ " + kasec.getTotalMoneyEarned());
+
+
+        wiseborn.receiveSalary(wiseborn.getSalary());
+        System.out.println("Kasec has paid salary to " + wiseborn.getName() + " and now has $ " + kasec.getTotalMoneyEarned());
     }
 }
