@@ -22,10 +22,10 @@ public class Teacher {
      * @param salary
      */
     public Teacher(int id, String name, int salary){
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
-        this.salaryEarned = 0;
+        this.id=id;
+        this.name=name;
+        this.salary=salary;
+        this.salaryEarned=0;
     }
 
     /**
@@ -70,12 +70,20 @@ public class Teacher {
      * @param salary
      */
     public void receiveSalary(int salary){
-        salaryEarned += salary;
+        salaryEarned+=salary;
         School.updateTotalMoneySpent(salary);
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "id=" + id +
+                ", Name of the Teacher='" + name + '\'' +
+                ", salary=" + salary +
+                ", Total salary earned so far $=" + salaryEarned +
+                '}';
+    }
 }
 
 

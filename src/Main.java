@@ -16,17 +16,17 @@ public class Main {
 
         int teacherId1 = 1;
         String teacherName1= "Marie";
-        int teacherSalary1 = 2000;
+        int teacherSalary1 = 500;
         Teacher marie = new Teacher(teacherId1, teacherName1, teacherSalary1);
 
         int teacherId2 = 2;
         String teacherName2 = "Wiseborn";
-        int teacherSalary2 = 60000;
+        int teacherSalary2 = 600;
         Teacher wiseborn = new Teacher(teacherId2, teacherName2, teacherSalary2);
 
         int teacherId3 = 3;
         String teacherName3 = "Joseph";
-        int teacherSalary3 = 60000;
+        int teacherSalary3 = 700;
         Teacher joseph = new Teacher(teacherId3, teacherName3, teacherSalary3);
 
         List <Teacher> teacherList = new ArrayList<>();
@@ -64,9 +64,9 @@ public class Main {
         School kasec = new School(teacherList, studentList);
 
       //method call
-        melisa.payFees(50000);
-        lauren.payFees(67000);
-        System.out.println("Kasec has earned $ " + kasec.getTotalMoneyEarned());
+        melisa.payFees(5000);
+        lauren.payFees(6000);
+        System.out.println("Kasec has earned $ "+ kasec.getTotalMoneyEarned());
 
         System.out.println("------Making School Pay Salary------");
         marie.receiveSalary(marie.getSalary());
@@ -75,5 +75,8 @@ public class Main {
 
         wiseborn.receiveSalary(wiseborn.getSalary());
         System.out.println("Kasec has paid salary to " + wiseborn.getName() + " and now has $ " + kasec.getTotalMoneyEarned());
+
+        System.out.println(lauren);
+        System.out.println(wiseborn);
     }
 }

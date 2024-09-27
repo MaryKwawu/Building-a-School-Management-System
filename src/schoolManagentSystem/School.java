@@ -19,12 +19,12 @@ public class School {
 
     /**
      *
-     * @param teacher list of teachers in the school
-     * @param student list of students in the school
+     * @param teachers list of teachers in the school
+     * @param students list of students in the school
      */
-    public School(List<Teacher> teacher, List<Student> student) {
-        this.teachers = teacher;
-        this.students = student;
+    public School(List<Teacher> teachers, List<Student> students) {
+        this.teachers = teachers;
+        this.students = students;
         totalMoneyEarned = 0;
         totalMoneySpent = 0;
 
@@ -35,7 +35,7 @@ public class School {
      * @return
      */
 
-    public List<Teacher> getTeacher() {
+    public List<Teacher> getTeachers() {
         return teachers;
     }
 
@@ -52,7 +52,7 @@ public class School {
      *
      * @return the students in a school
      */
-    public List<Student> getStudent() {
+    public List<Student> getStudents() {
         return students;
     }
 
@@ -96,7 +96,7 @@ public class School {
      * @param moneySpent the money that is spent by school
      */
     public static void updateTotalMoneySpent(int moneySpent) {
-        totalMoneySpent += moneySpent;
+        totalMoneyEarned-=moneySpent;
     }
 
 

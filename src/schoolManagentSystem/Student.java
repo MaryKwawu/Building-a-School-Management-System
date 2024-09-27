@@ -8,24 +8,24 @@ public class Student {
     private  int id;
     private String name;
     private int grade;
-    private int payFees;
+    private int feesPaid;
     private int feesTotal;
 
 
     /**
      * construstor: create a new student by initializing
-     *  fess for every student is GH6,000
+     *  fess for every student is GH60000
      *  fees paid initially is GH0
      * @param id
      * @param name
      * @param grade
      */
     public Student(int id, String name, int grade){
-        this.id = id;
-        this.name = name;
-        this.grade = grade;
-        this.payFees = 0;
-        this.feesTotal = 60000;
+        this.id=id;
+        this.name=name;
+        this.grade=grade;
+        this.feesPaid=0;
+        this.feesTotal=30000;
 
     }
 
@@ -43,16 +43,16 @@ public void setGrade(int grade){
 
     /**
      * * Keep adding the fees to the fees paid
-     * Fees that the student pays
+     * Add the Fees to the fees paid t
      *  feespaid = 2000 + 3000 + 4000
      *  And the fees to the fees paid
      * @param fees
      */
     public void payFees(int fees){
-    payFees +=fees;
+    feesPaid+=fees;
 
     //method call used here based on making updateTotalMoneyEarned
-    School.updateTotalMoneyEarned(fees);
+    School.updateTotalMoneyEarned(feesPaid);
 }
 
 
@@ -86,7 +86,7 @@ public void setGrade(int grade){
      * @return the fees paid by the student
      */
     public int getFeesPaid() {
-        return payFees;
+        return feesPaid;
     }
 
     /**
@@ -103,10 +103,17 @@ public void setGrade(int grade){
      * @return the remaining fees
      */
     public int getRemainingFees(){
-        return feesTotal - payFees;
+        return feesTotal-feesPaid;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", grade=" + grade +
+                ", feesPaid=" + feesPaid +
+                ", feesTotal=" + feesTotal +
+                '}';
+    }
 }
